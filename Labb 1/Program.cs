@@ -4,6 +4,7 @@
 // Min andra kommentar
 //================================================
 
+
 bool isRunning = true;
 
 while (isRunning)
@@ -16,12 +17,11 @@ while (isRunning)
 void DisplayMenu()
 {
 
-    Console.WriteLine("======MAT-MATS LOGISTIK======\n1. Registrera ny leverans\n2. Beställ mer\n3. Ny inventering\n4. Stäng");
-    Console.Write(">");
-
+    Console.WriteLine("======MAT-MATS LOGISTIK======\n1. Registrera ny leverans\n2. Beställ mer\n3. Ny inventering\n4. Tid att tänka\n5. Stäng");
+    Console.Write(">"); 
 }
 
-void ReadInput()
+void ReadInput() 
 {
     switch (Int32.Parse(Console.ReadLine()))
     {
@@ -35,6 +35,9 @@ void ReadInput()
             Console.WriteLine("Vad väntar du på? Börja inventera hyllorna!");
             break;
         case 4:
+            Console.WriteLine("Tid att tänka?");
+            break ;
+        case 5:
             isRunning = false;
             Console.WriteLine("Bra jobbat. Ses imorgon.");
             break;
